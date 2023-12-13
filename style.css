@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    color: whitesmoke;
+    background-color: black;
+    flex-direction: column;
+}
+
+.tab {
+    position: fixed;
+    background-color: blueviolet;
+    width: 98vw;
+    height: 10vh;
+    border: 2px solid grey;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    top: 0px;
+    z-index: 5;
+}
+
+.img {
+    width: 8vw;
+    height: 8vh;
+    position: relative;
+    align-self: center;
+    left: 2px;
+}
+
+.logo {
+    width: 8vw;
+    height: 8vh;
+    /* border: 2px solid grey; */
+    object-fit: contain;
+    position: relative;
+    align-self: center;
+}
+
+.nav_bar {
+    width: 25vw;
+    height: 8vh;
+    position: relative;
+    display: flex;
+    /* border: 2px solid grey; */
+    flex-direction: row;
+    left: 30vw;
+    align-self: center;
+}
+
+.name {
+    position: relative;
+    left: 2vw;
+    font-size: x-large;
+    align-self: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav_li {
+    padding-right: 20px;
+    /* border: 2px solid grey; */
+    margin: 1px;
+    font-size: large;
+    gap: 5px;
+}
+
+.login {
+    background-color: rgb(177, 99, 251);
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 1px;
+    font-size: large;
+    gap: 5px;
+    align-self: center;
+    left: 30vw;
+}
+/*.side_nav{
+    position: fixed;
+    display: flex;
+    width: 10vw;
+    height: 85vh;
+    top: 12vh;
+    background-color:rgb(177, 99, 251);
+}
+.a_nav{
+    display:flex;
+}
+.a_ul{
+
+}
+.a_li{
+    position: relative;
+    column-gap: 50px;
+    font-size: large;
+/* } */
+.body{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    top: 11vh;
+    
+    
+}
+.ele_box{
+    display:flex;
+    flex-wrap:  wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+/* gap: 10px; */
+}
+.triple{
+    /* border: 2px solid grey; */
+    display: flex;
+    flex-direction: row; 
+    column-gap: 15px;
+}
+.elements{
+    border: 2px solid grey;
+    border-radius: 15px;
+    background-color: grey; 
+    width: 350px;
+}
