@@ -8,14 +8,17 @@ body {
 .tab {
     position: fixed;
     background-color: blueviolet;
-    width: 98vw;
+    width: 100vw;
     height: 10vh;
     border: 2px solid grey;
     display: flex;
     flex-direction: row;
     gap: 5px;
     top: 0px;
+    left: 0px;
+    right: 0px;
     z-index: 5;
+    flex-wrap: wrap;
 }
 
 .img {
@@ -37,23 +40,23 @@ body {
 
 .nav_bar {
     width: 25vw;
-    height: 8vh;
+    /* height: 8vh; */
     position: relative;
     display: flex;
     /* border: 2px solid grey; */
     flex-direction: row;
-    left: 30vw;
+    /* left: 30vw; */
     align-self: center;
 }
 
 .name {
     position: relative;
-    left: 2vw;
-    font-size: x-large;
+    /* left: 2vw; */
+    font-size: xx-large;
     align-self: center;
 }
 
-.list {
+.nav_ul {
     list-style: none;
     display: flex;
     flex-direction: row;
@@ -82,6 +85,7 @@ body {
     align-self: center;
     left: 30vw;
 }
+
 /*.side_nav{
     position: fixed;
     display: flex;
@@ -101,31 +105,220 @@ body {
     column-gap: 50px;
     font-size: large;
 /* } */
-.body{
+.body {
     /* border: 2px solid red; */
     display: flex;
     flex-direction: column;
-    position:relative;
+    position: relative;
     top: 11vh;
-    
-    
+
+
 }
-.ele_box{
-    display:flex;
-    flex-wrap:  wrap;
-    justify-content: space-evenly;
-    gap: 10px;
-/* gap: 10px; */
-}
-.triple{
-    /* border: 2px solid grey; */
+
+.about {
     display: flex;
-    flex-direction: row; 
-    column-gap: 15px;
+    flex-direction: column;
+    align-self: center;
+    width: 50vw;
+    flex-wrap: wrap;
 }
-.elements{
+
+.abt_head {
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* gap: 1px; */
+    /* border: 2px solid grey;  */
+    /* height: 20vh; */
+}
+
+.top {
+    position: relative;
+    /* align-self: center; */
+    padding: 0px;
+    font-size: xx-large;
+    /* border: 2px solid grey; */
+}
+
+.mid {
+    position: relative;
+    padding: 0px;
+    font-size: xx-large;
+    /* border: 2px solid grey; */
+}
+
+.about_content {}
+
+.right {
+    position: relative;
+
+}
+
+.ele_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    row-gap: 50px;
+    /* gap: 10px; */
+}
+
+.ele_head {
+    align-self: center;
+}
+
+.elements {
     border: 2px solid grey;
     border-radius: 15px;
-    background-color: grey; 
-    width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    width: 25vw;
+}
+
+.ele_img {
+    width: 25vw;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.goto {
+    display: flex;
+    position: relative;
+    align-self: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: blueviolet;
+    border-radius: 5px;
+    gap: 5px;
+}
+
+.goto_icon {
+    width: 15px;
+    height: 15px;
+    object-fit: cover;
+    align-self: center;
+}
+
+
+
+
+/* Media Query part of CSS */
+
+
+
+
+@media only screen and (max-width: 1080px) {
+    .tab {
+        position: fixed;
+        background-color: blueviolet;
+        width: 100vw;
+        height: 10vh;
+        border: 2px solid grey;
+        display: flex;
+        /* flex-direction: row; */
+        gap: 5px;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        z-index: 5;
+        flex-wrap: wrap;
+    }
+    
+    .img {
+        width: 8vw;
+        height: 8vh;
+        position: relative;
+        align-self: center;
+        left: 2px;
+    }
+    
+    .logo {
+        width: 8vw;
+        height: 8vh;
+        /* border: 2px solid grey; */
+        object-fit: contain;
+        position: relative;
+        align-self: center;
+    }
+    
+    .nav_bar {
+        /* width: 25vw; */
+        /* height: 8vh; */
+        position: relative;
+        display: flex;
+        /* border: 2px solid grey; */
+        flex-direction: row;
+        /* left: 30vw; */
+        align-self: center;
+    }
+    
+    .name {
+        position: relative;
+        /* left: 2vw; */
+        font-size: xx-large;
+        align-self: center;
+    }
+    
+    .nav_ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .nav_li {
+        padding-right: 15px;
+        /* border: 2px solid grey; */
+        margin: 1px;
+        font-size: large;
+        gap: 3px;
+    }
+    
+    .login {
+        background-color: rgb(177, 99, 251);
+        position: relative;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        margin: 1px;
+        font-size: large;
+        gap: 5px;
+        align-self: center;
+        left: 30vw;
+    }
+    .ele_box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        row-gap: 60px;
+        /* gap: 10px; */
+    }
+
+    .ele_head {
+        align-self: center;
+    }
+
+    .elements {
+        border: 2px solid grey;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        background-color: grey;
+        width: 350px;
+    }
+
+    .ele_img {
+        width: 350px;
+        object-fit: contain;
+        border-radius: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .nav_bar{
+        display: none;
+    }
 }
