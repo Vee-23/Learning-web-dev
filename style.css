@@ -1,9 +1,15 @@
+/* CSS */
+
 body {
     display: flex;
     color: whitesmoke;
     background-color: black;
     flex-direction: column;
+    gap: 20px;
+    /* flex-wrap: wrap; */
 }
+
+/* CSS FOR THE MENU */
 
 .tab {
     position: fixed;
@@ -13,6 +19,7 @@ body {
     border: 2px solid grey;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     gap: 5px;
     top: 0px;
     left: 0px;
@@ -32,7 +39,6 @@ body {
 .logo {
     width: 8vw;
     height: 8vh;
-    /* border: 2px solid grey; */
     object-fit: contain;
     position: relative;
     align-self: center;
@@ -40,18 +46,14 @@ body {
 
 .nav_bar {
     width: 25vw;
-    /* height: 8vh; */
     position: relative;
     display: flex;
-    /* border: 2px solid grey; */
     flex-direction: row;
-    /* left: 30vw; */
     align-self: center;
 }
 
 .name {
     position: relative;
-    /* left: 2vw; */
     font-size: xx-large;
     align-self: center;
 }
@@ -64,10 +66,14 @@ body {
 
 .nav_li {
     padding-right: 20px;
-    /* border: 2px solid grey; */
     margin: 1px;
     font-size: large;
     gap: 5px;
+}
+
+.account {
+    display: flex;
+    gap: 10px;
 }
 
 .login {
@@ -81,10 +87,15 @@ body {
     border-radius: 10px;
     margin: 1px;
     font-size: large;
-    gap: 5px;
     align-self: center;
-    left: 30vw;
+
 }
+
+/* CSS FOR THE MENU */
+
+/* ---------------- */
+
+/* CSS FOR THE SIDE BAR */
 
 /*.side_nav{
     position: fixed;
@@ -104,16 +115,25 @@ body {
     position: relative;
     column-gap: 50px;
     font-size: large;
-/* } */
+ } */
+
+/* CSS FOR THE SIDE BAR */
+
+/* ---------------- */
+
+/* CSS FOR THE MAIN CONTENT */
+
 .body {
-    /* border: 2px solid red; */
+
     display: flex;
     flex-direction: column;
     position: relative;
     top: 11vh;
-
+    gap: 20px;
 
 }
+
+/* CSS FOR THE ABOUT PAGE */
 
 .about {
     display: flex;
@@ -126,40 +146,40 @@ body {
 .abt_head {
     display: flex;
     flex-direction: column;
-    /* flex-wrap: wrap; */
-    /* gap: 1px; */
-    /* border: 2px solid grey;  */
-    /* height: 20vh; */
+    gap: 5px;
 }
 
 .top {
     position: relative;
-    /* align-self: center; */
     padding: 0px;
-    font-size: xx-large;
+    font-size: 5vh;
+    margin-top: 0px;
+    margin-bottom: 0px;
     /* border: 2px solid grey; */
 }
 
 .mid {
     position: relative;
     padding: 0px;
-    font-size: xx-large;
+    font-size: 5vh;
+    margin-top: 0px;
     /* border: 2px solid grey; */
 }
 
-.about_content {}
-
-.right {
-    position: relative;
-
+.about_p_content{
+    font-size: x-large;
 }
+
+/* -------------- */
+
+/* CSS OF THE CARDS */
 
 .ele_box {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     row-gap: 50px;
-    /* gap: 10px; */
+
 }
 
 .ele_head {
@@ -173,6 +193,8 @@ body {
     flex-direction: column;
     background-color: grey;
     width: 25vw;
+    font-size: larger;
+    /* align-self: center; */
 }
 
 .ele_img {
@@ -180,6 +202,7 @@ body {
     object-fit: contain;
     border-radius: 15px;
 }
+
 
 .goto {
     display: flex;
@@ -199,12 +222,76 @@ body {
     align-self: center;
 }
 
+/* ----------- */
 
+/* CSS OF QNA */
+
+.qna_box {
+    align-self: center;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+
+}
+
+.qna_head {
+    font-size: 5vh;
+    border-radius: 10px;
+    align-self: center;
+}
+
+.qna {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    font-size: 3vh;
+
+}
+
+.quest {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-bottom: 0px;
+    padding: 10px;
+    background-color: rgb(46, 46, 46);
+}
+
+.ans {
+    border: 2px solid grey;
+    border-radius: 5px;
+    margin-top: 0px;
+    padding: 10px;
+    background-color: rgb(186, 113, 255);
+}
+
+/* -------------- */
+
+/* CSS OF THE FOOTER */
+
+.foot {
+    display: flex;
+    width: 80vw;
+    margin-top: 10vh;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.foot_div {
+    display: flex;
+    flex-direction: row;
+}
+
+.team_name {
+    font-size: x-large;
+}
+
+/* ------------------- */
 
 
 /* Media Query part of CSS */
-
-
 
 
 @media only screen and (max-width: 1080px) {
@@ -215,7 +302,8 @@ body {
         height: 10vh;
         border: 2px solid grey;
         display: flex;
-        /* flex-direction: row; */
+        flex-direction: row;
+        justify-content: space-around;
         gap: 5px;
         top: 0px;
         left: 0px;
@@ -223,7 +311,7 @@ body {
         z-index: 5;
         flex-wrap: wrap;
     }
-    
+
     .img {
         width: 8vw;
         height: 8vh;
@@ -231,48 +319,46 @@ body {
         align-self: center;
         left: 2px;
     }
-    
+
     .logo {
         width: 8vw;
         height: 8vh;
-        /* border: 2px solid grey; */
         object-fit: contain;
         position: relative;
         align-self: center;
     }
-    
+
     .nav_bar {
-        /* width: 25vw; */
-        /* height: 8vh; */
+        width: 25vw;
         position: relative;
         display: flex;
-        /* border: 2px solid grey; */
         flex-direction: row;
-        /* left: 30vw; */
         align-self: center;
     }
-    
+
     .name {
         position: relative;
-        /* left: 2vw; */
         font-size: xx-large;
         align-self: center;
     }
-    
+
     .nav_ul {
         list-style: none;
         display: flex;
         flex-direction: row;
     }
-    
+
     .nav_li {
-        padding-right: 15px;
-        /* border: 2px solid grey; */
+        padding-right: 20px;
         margin: 1px;
         font-size: large;
-        gap: 3px;
+        gap: 5px;
     }
-    
+
+    .account {
+        display: flex;
+    }
+
     .login {
         background-color: rgb(177, 99, 251);
         position: relative;
@@ -284,16 +370,15 @@ body {
         border-radius: 10px;
         margin: 1px;
         font-size: large;
-        gap: 5px;
         align-self: center;
-        left: 30vw;
     }
+
     .ele_box {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         row-gap: 60px;
-        /* gap: 10px; */
+
     }
 
     .ele_head {
@@ -316,9 +401,19 @@ body {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
 
-    .nav_bar{
+    .nav_bar {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .foot {
+        display: none;
+    }
+
+    .login {
         display: none;
     }
 }
