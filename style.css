@@ -2,24 +2,37 @@
 
 body {
     display: flex;
-    color: whitesmoke;
+    color: white;
+    /* align-items: center; */
+    width: 44vw;
     background-color: black;
     flex-direction: column;
     gap: 20px;
-    /* flex-wrap: wrap; */
+    padding: 0px;
+}
+
+.main_cont {
+    display: flex;
+    gap: 10px;
+    padding: 0px;
+}
+
+a{
+    color: aliceblue;
 }
 
 /* CSS FOR THE MENU */
 
+
+
 .tab {
     position: fixed;
     background-color: blueviolet;
-    width: 100vw;
+    width: 104vw;
     height: 10vh;
-    border: 2px solid grey;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
     gap: 5px;
     top: 0px;
     left: 0px;
@@ -28,11 +41,14 @@ body {
     flex-wrap: wrap;
 }
 
+.hamburg {
+    display: none;
+}
+
 .img {
     width: 8vw;
     height: 8vh;
     position: relative;
-    align-self: center;
     left: 2px;
 }
 
@@ -41,15 +57,6 @@ body {
     height: 8vh;
     object-fit: contain;
     position: relative;
-    align-self: center;
-}
-
-.nav_bar {
-    width: 25vw;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
 }
 
 .name {
@@ -58,25 +65,145 @@ body {
     align-self: center;
 }
 
-.nav_ul {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-}
-
-.nav_li {
-    padding-right: 20px;
-    margin: 1px;
-    font-size: large;
-    gap: 5px;
+.theme_img {
+    width: 60px;
+    height: 40px;
+    object-fit: contain;
+    border-radius: 10px;
 }
 
 .account {
     display: flex;
     gap: 10px;
+    margin: 0px 35px;
 }
 
 .login {
+    background-color: rgb(177, 99, 251);
+    position: relative;
+    padding: 20px 10px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    margin: 1px;
+    font-size: large;
+    align-self: center;
+}
+
+/* CSS FOR THE MENU */
+
+
+
+/* CSS FOR THE SIDE BAR */
+
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    width: 25vw;
+    height: 85vh;
+    margin: 0px;
+    top: 11vh;
+    border-radius: 5px;
+    background-color: rgb(37, 37, 37);
+}
+
+.nav_bar {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    width: 340px;
+    height: 300px;
+}
+
+.nav_logo {
+    display: flex;
+    height: 30px;
+    gap: 14px;
+    align-items: center;
+    margin: 5px;
+    padding: 20px;
+}
+
+.img_nav {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+
+}
+
+.name_nav {
+    font-size: larger;
+    font-weight: bold;
+}
+
+.close {
+    display: none;
+}
+
+.nav_ul {
+    margin: 0px;
+    list-style: none;
+    font-size: x-large;
+}
+
+.nav_li {
+    padding: 5px;
+    margin: 10px;
+}
+
+.theme_cont_nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: black;
+    font-size: x-large;
+    padding: 5px;
+}
+
+.theme_cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 45px;
+    border-radius: 70px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+.acc_settings {
+    /* border: 2px solid  red ; */
+    border-radius: 10px;
+    background-color: black;
+    margin: 5px;
+    width: 335px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.acc_content {
+    padding: 3px;
+    align-self: center;
+    font-size: x-large;
+}
+
+.account_nav {
+    display: flex;
+    align-self: center;
+    gap: 10px;
+}
+
+.login_nav {
     background-color: rgb(177, 99, 251);
     position: relative;
     padding-left: 20px;
@@ -88,50 +215,51 @@ body {
     margin: 1px;
     font-size: large;
     align-self: center;
-
+    cursor: pointer;
 }
 
-/* CSS FOR THE MENU */
+.foot_nav {
+    position: absolute;
+    color: grey;
+    bottom: 2px;
+}
 
-/* ---------------- */
 
 /* CSS FOR THE SIDE BAR */
 
-/*.side_nav{
-    position: fixed;
-    display: flex;
-    width: 10vw;
-    height: 85vh;
-    top: 12vh;
-    background-color:rgb(177, 99, 251);
-}
-.a_nav{
-    display:flex;
-}
-.a_ul{
 
-}
-.a_li{
-    position: relative;
-    column-gap: 50px;
-    font-size: large;
- } */
-
-/* CSS FOR THE SIDE BAR */
-
-/* ---------------- */
 
 /* CSS FOR THE MAIN CONTENT */
 
-.body {
 
+.body_dark_theme {
     display: flex;
     flex-direction: column;
     position: relative;
-    top: 11vh;
+    padding: 0px;
+    top: 80px;
     gap: 20px;
-
+    width: 72vw;
+    margin: 0px;
+    left: 26vw;
+    color: whitesmoke;
+    background-color: rgb(0, 0, 0);
 }
+
+.body_light_theme {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0px;
+    top: 80px;
+    gap: 20px;
+    width: 72vw;
+    margin: 0px;
+    left: 26vw;
+    color: black;
+    background-color: whitesmoke;
+}
+
 
 /* CSS FOR THE ABOUT PAGE */
 
@@ -155,7 +283,7 @@ body {
     font-size: 5vh;
     margin-top: 0px;
     margin-bottom: 0px;
-    /* border: 2px solid grey; */
+
 }
 
 .mid {
@@ -163,10 +291,9 @@ body {
     padding: 0px;
     font-size: 5vh;
     margin-top: 0px;
-    /* border: 2px solid grey; */
 }
 
-.about_p_content{
+.about_p_content {
     font-size: x-large;
 }
 
@@ -191,10 +318,10 @@ body {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    background-color: grey;
+    background-color: rgb(183, 116, 247);
     width: 25vw;
     font-size: larger;
-    /* align-self: center; */
+
 }
 
 .ele_img {
@@ -228,7 +355,7 @@ body {
 
 .qna_box {
     align-self: center;
-    width: 80vw;
+    width: 65vw;
     display: flex;
     flex-direction: column;
     gap: 0px;
@@ -245,20 +372,23 @@ body {
     font-size: large;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     font-size: 3vh;
 
 }
 
 .quest {
     border: 2px solid grey;
+    text-wrap: wrap;
     border-radius: 5px;
     margin-bottom: 0px;
     padding: 10px;
-    background-color: rgb(46, 46, 46);
+    background-color: rgb(140, 140, 140);
 }
 
 .ans {
     border: 2px solid grey;
+    text-wrap: wrap;
     border-radius: 5px;
     margin-top: 0px;
     padding: 10px;
@@ -294,126 +424,84 @@ body {
 /* Media Query part of CSS */
 
 
-@media only screen and (max-width: 1080px) {
-    .tab {
-        position: fixed;
-        background-color: blueviolet;
-        width: 100vw;
-        height: 10vh;
-        border: 2px solid grey;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        gap: 5px;
+@media only screen and (max-width: 1380px) {
+
+
+    body{
+        align-items: center;
+    }
+
+    .name{
+        font-size: larger;
+    }
+
+    .sidebar {
+        left: -150%;
         top: 0px;
-        left: 0px;
-        right: 0px;
-        z-index: 5;
-        flex-wrap: wrap;
+        width: 350px;
+        height: 100vh;
+        transition: all 0.8s;
     }
 
-    .img {
-        width: 8vw;
-        height: 8vh;
-        position: relative;
-        align-self: center;
-        left: 2px;
-    }
-
-    .logo {
-        width: 8vw;
-        height: 8vh;
-        object-fit: contain;
-        position: relative;
-        align-self: center;
-    }
-
-    .nav_bar {
-        width: 25vw;
-        position: relative;
+    .hamburg {
         display: flex;
-        flex-direction: row;
-        align-self: center;
+        margin: 0px 5px;
+        width: 25px;
+        cursor: pointer;
     }
 
-    .name {
-        position: relative;
-        font-size: xx-large;
-        align-self: center;
-    }
-
-    .nav_ul {
-        list-style: none;
+    .close {
         display: flex;
-        flex-direction: row;
+        width: 35px;
+        filter: invert();
+        cursor: pointer;
     }
 
-    .nav_li {
-        padding-right: 20px;
-        margin: 1px;
-        font-size: large;
-        gap: 5px;
-    }
-
-    .account {
-        display: flex;
-    }
-
-    .login {
-        background-color: rgb(177, 99, 251);
-        position: relative;
-        padding-left: 20px;
-        padding-right: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border: 2px solid grey;
-        border-radius: 10px;
-        margin: 1px;
-        font-size: large;
-        align-self: center;
+    .body_dark_theme {
+        align-items: center;
+        width: 90vw;
+        /* left: 20px; */
     }
 
     .ele_box {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
         row-gap: 60px;
-
-    }
-
-    .ele_head {
-        align-self: center;
     }
 
     .elements {
-        border: 2px solid grey;
-        border-radius: 15px;
-        display: flex;
-        flex-direction: column;
-        background-color: grey;
-        width: 350px;
+        width: 300px;
+        margin: 10px;
     }
 
     .ele_img {
-        width: 350px;
+        width: 300px;
         object-fit: contain;
-        border-radius: 15px;
+
     }
-}
 
-@media only screen and (max-width: 960px) {
-
-    .nav_bar {
+    .foot{
         display: none;
     }
 }
 
-@media only screen and (max-width: 720px) {
-    .foot {
-        display: none;
+@media only screen and (max-width: 300px) {
+
+    .name{
+        font-size: small;
     }
 
-    .login {
-        display: none;
+    .sidebar{
+        width: 280px;
+    }
+
+    .navbar{
+        width: 260px;
+    }
+
+    .theme_cont_nav{
+        width: 260px;
+    }
+
+    .acc_settings{
+        width: 260px;
     }
 }
