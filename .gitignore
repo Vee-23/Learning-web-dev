@@ -1,2 +1,4 @@
 /assets_netflix
 /downloaded_img
+.env
+node_modules
