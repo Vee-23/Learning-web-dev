@@ -1,0 +1,2 @@
+https://cdn-icons-png.flaticon.com/512/1687/1687737.png   --> light mode
+https://cdn-icons-png.flaticon.com/512/4893/4893587.png   --> dark mode
