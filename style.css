@@ -21,6 +21,7 @@ a{
     color: aliceblue;
 }
 
+
 /* CSS FOR THE MENU */
 
 
@@ -153,6 +154,7 @@ a{
 .nav_li {
     padding: 5px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .theme_cont_nav {

@@ -24,6 +24,13 @@ async function main() {
        }
     })
 
+    document.querySelector(".feature1").addEventListener("click", ()=>{
+        alert("This feature is currently under construction");
+    })
+    document.querySelector(".feature2").addEventListener("click", ()=>{
+        alert("This feature is currently under construction");
+    })
+
 }
 
 

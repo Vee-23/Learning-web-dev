@@ -7,10 +7,7 @@
 </head>
 <body>
     <h1>Login</h1>
-    <% if (messages.error){ %>
-        <% messages.error %>
-        <% } %>
-    <form action="/views/login" method="post">
+    <form action="/views/login.ejs" method="post">
         <div>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
@@ -22,7 +19,7 @@
         <button type="submit">Login</button>
     </form>
 
-    <a href="/views/register">Register</a>
+    <a href="/views/register.ejs">Register</a>
 
 </body>
 </html>

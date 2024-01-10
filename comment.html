@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets_of_page/programming-coding-icon-logo-design-template-vector.jpg">
+    <title>Basics of Programming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="comments.css">
+</head>
+
+<body id="main_body">
+
+
+    <header class="tab">
+        
+        <div class="hamburg">
+            <img width="40" src="assets_of_page/hamburger.svg" alt="">
+        </div>
+
+        <div class="account">
+            <div class="img">
+                <img class="logo" src="assets_of_page/programming-coding-icon-logo-design-template-vector.jpg" />
+            </div>
+            <span class="name">
+                Basics of programming
+            </span>
+        </div>
+
+    </header>
+
+    <div class="main_cont">
+
+
+        <div id="sidebar_id" class="sidebar">
+            <nav class="nav_bar">
+
+                <div class="nav_logo">
+                    <div class="img_nav_cont">
+                        <img class="img_nav"
+                            src="assets_of_page/programming-coding-icon-logo-design-template-vector.jpg" />
+                    </div>
+                    <div class="name_nav">
+                        Basics of Programming
+                    </div>
+                    <div class="close_cont">
+                        <img src="assets_of_page/close.svg" alt="" class="close">
+                    </div>
+                </div>
+
+                <ul class="nav_ul">
+                    <li class="nav_li"><a href="http://127.0.0.1:3000/index.html" style="text-decoration:none">Home</a></li>
+                    <li class="nav_li"><a href="" style="text-decoration:none">Discussions</a></li>
+                    <li class="nav_li feature1"><a>Notes</a></li>
+                    <li class="nav_li feature2"><a>Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="theme_cont_nav">
+                Theme settings
+                <div class="theme_cont">
+                    <img class="theme_img" src="https://cdn-icons-png.flaticon.com/512/4893/4893587.png " alt="">
+                </div>
+            </div>
+
+
+            <div class="acc_settings">
+                <div class="acc_content">
+                    Account Settings
+                </div>
+                <div class="account_nav">
+                    <div class="login_nav"> <a href="http://localhost:3000/views/login" style="text-decoration:none">Login</a></div>
+                    <div class="login_nav"> <a href="http://localhost:3000/views/register" style="text-decoration:none">Sign Up</a> </div>
+                </div>
+            </div>
+
+            <div class="foot_nav">
+                Basics of Programming | By Team_Incognito
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <main class="target_body body_dark_theme" id="body_id">
+
+            <div class="container">
+                <div class="head"><h1>Post a comment</h1></div>
+                <div class="text"><p>We are happy to hear from you (this is a beta version)</p></div>
+                
+                <div class="commentbox">
+                    <img src="Property/user1.png" alt="">
+                    <div class="content">
+                        <h2>Comment as: </h2>
+                        <input type="text" value="Anonymous" class="user">
+        
+                        <div class="commentinput">
+                            <input type="text" placeholder="Enter comment" class="usercomment">
+                            <div class="buttons">
+                                <button type="submit" disabled id="publish">Publish</button>
+                                <div class="notify">
+                                    <input type="checkbox" class="notifyinput"> <span>Notify me</span>
+                                </div>
+                            </div>
+                        </div>
+                            <p class="policy">This site is protected by reCAPTCHA and the Google <a href="">Privacy Policy</a> and <a href="">Terms of service</a> apply
+                        </div> 
+                     </div>
+                     <div><span id="comment">0</span> Comments</div>
+                        <div class="comments"></div>
+                 </div> 
+                 
+                 
+        
+        
+            <script>
+                "use strict"; 
+        
+                const userId = { 
+                    name: null, 
+                    identity: null, 
+                    image: null, 
+                    message: null, 
+                    date: null, 
+                }
+        
+                const userComment = document.querySelector(".usercomment"); 
+                const publishBtn = document.querySelector("#publish"); 
+                const comments = document.querySelector(".comments"); 
+                const userName = document.querySelector(".user"); 
+        
+                userComment.addEventListener("input", e => { 
+                    if(!userComment.value) { 
+                        publishBtn.setAttribute("disabled", "disabled"); 
+                        publishBtn.classList.remove("abled"); 
+                    }else { 
+                        publishBtn.removeAttribute("disabled"); 
+                        publishBtn.classList.add("abled");
+                    }
+                })
+        
+        
+        
+                function addPost() { 
+                    console.log("The button works!")
+                    if(!userComment.value) return; 
+                    userId.name = userName.value; 
+                    if(userId.name === "Anonymous") { 
+                        userId.identity = false; 
+                        userId.image = "Property/anonymous.png" 
+                    }else { 
+                        userId.identity = true; 
+                        userId.image = "Property/user.png"
+                    }
+        
+        
+                    userId.message = userComment.value; 
+                    userId.date = new Date().toLocaleString(); 
+                    let published = 
+                    `<div class="parents">
+                        <img src="${userId.image}"> 
+                        <div>
+                            <h1>${userId.name}</h1>
+                            <p>${userId.message}</p> 
+                            <div class="engagements"><img src="Property/like.png"><img src="Property/dislike.png"></div>
+                            <span class="date">${userId.date}</span>
+                        </div>     
+                    </div>`;
+        
+                    comments.innerHTML += published; 
+                    userComment.value = "";
+        
+                    let commentsNum = document.querySelectorAll(".parents").length; 
+                    document.getElementById("comment").textContent = commentsNum; 
+                }
+        
+                publishBtn.addEventListener("click", addPost) 
+        
+        
+        
+        
+        
+        
+        
+        
+            </script>
+
+
+            <footer class="foot">
+                <div class="foot_div">
+                    <div>
+                        <img class="logo" src="assets_of_page/programming-coding-icon-logo-design-template-vector.jpg" />
+                    </div>
+                    <div class="name">
+                        Basics of Programming
+                    </div>
+                </div>
+                <div class="team_name">By Team_Incognito</div>
+            </footer>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
