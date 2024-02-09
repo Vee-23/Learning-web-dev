@@ -31,8 +31,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 app.use(methodOverride('_method'))
 
-app.get('/views/index', checkAuthenticated, (req, res) => {
-    res.render('index.ejs', { name: req.user.name })
+app.get('/index', checkAuthenticated, (req, res) => {
+    res.render('index.html', { name: req.user.name })
 })
 
 app.get('/views/login', checkAuthenticated, (req, res) => {
@@ -64,7 +64,7 @@ app.post('/api/v1/register', validateCredentials,async (req, res) => {
         })
         res.render("registerSuccess.ejs")
     } catch (error) {
-        res.redirect('/views/register')
+        res.redirect('/views/register.ejs')
     }
     console.log(users)
 })
